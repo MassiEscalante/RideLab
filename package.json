@@ -5,5 +5,9 @@
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.7"
+  },
+  "scripts": {
+    "build": "tsc", 
+    "start": "npm run build && node dist/index.js" 
   }
 }
