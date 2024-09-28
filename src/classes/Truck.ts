@@ -9,7 +9,7 @@ import AbleToTow from '../interfaces/AbleToTow.js';
 // TODO: Declare properties of the Truck class
 // TODO: The properties should include vin, color, make, model, year, weight, top speed, wheels, and towing capacity
 // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[]), towingCapacity (number)
-class Truck extends Vehicle implements AbleToTow {  // <-- Truck extends Vehicle and implements AbleToTow
+class Truck extends Vehicle implements AbleToTow {  // <--THIS CURLY BRACKET IS RED
   vin: string;
   color: string;
   make: string;
@@ -72,7 +72,7 @@ class Truck extends Vehicle implements AbleToTow {  // <-- Truck extends Vehicle
     // TODO: The method should call the printDetails method of the parent class
     // TODO: The method should log the details of the Truck
     // TODO: The details should include the VIN, make, model, year, weight, top speed, color, towing capacity, and wheels
-    printDetails(): void {
+    override printDetails(): void {
       super.printDetails();
       console.log(`VIN: ${this.vin}, Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
       console.log(`Weight: ${this.weight} lbs, Top Speed: ${this.topSpeed} mph`);
@@ -80,6 +80,5 @@ class Truck extends Vehicle implements AbleToTow {  // <-- Truck extends Vehicle
       console.log(`Color: ${this.color}, Wheels: ${this.wheels.length}`);
     }
   }
-
 // Export the Truck class as the default export
 export default Truck;

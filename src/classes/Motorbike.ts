@@ -59,7 +59,7 @@ wheelie(): void {
 // TODO: The method should log the details of the Motorbike
 // TODO: The details should include the VIN, make, model, year, weight, top speed, color, and wheels
 
-printDetails(): void {
+override printDetails(): void {
   super.printDetails();
   console.log(`VIN: ${this.vin}, Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
   console.log(`Weight: ${this.weight} lbs, Top Speed: ${this.topSpeed} mph`);
